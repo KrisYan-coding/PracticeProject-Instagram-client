@@ -10,7 +10,7 @@ function Login() {
   const { setAuthState, authState } = useContext(NavLinkContext)
 
   const initialValues = {
-    username: 'kris',
+    username: 'Kris',
     password: '111',
   }
 
