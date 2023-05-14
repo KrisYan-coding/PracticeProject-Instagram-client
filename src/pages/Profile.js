@@ -131,7 +131,7 @@ function Profile() {
           <div className={styles.userImg + ' userImg'}>
             <div className={styles.imgBox + ' imgBox'}>
               <img
-                src={'./users/' + CurrentUserInfo.image || 'user.png'}
+                src={`./users/${CurrentUserInfo.image}` || `./users/user.png`}
                 alt="userImage"
               />
             </div>
