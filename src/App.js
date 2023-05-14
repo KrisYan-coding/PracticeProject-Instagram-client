@@ -26,7 +26,7 @@ function App() {
     state: '',
     image: '',
   })
-  const BASE_URL = process.env.BASE_URL
+  const BASE_URL = 'https://practiceproject-instagram-server.onrender.com'
 
   useEffect(() => {
     const url = `${BASE_URL}/auth/authToken`
@@ -56,7 +56,11 @@ function App() {
         <NavLinkContext.Provider
           value={{ setNavLink, authState, setAuthState, BASE_URL }}
         >
-          <Router basename={process.env.REACT_BASE_URL}>
+          <Router
+            basename={
+              'https://krisyan-coding.github.io/PracticeProject_Instagram_client/'
+            }
+          >
             <Navbar className="navbar" navLink={navLink}></Navbar>
             <main>
               <Routes>
