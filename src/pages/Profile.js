@@ -130,7 +130,7 @@ function Profile() {
           <div className={styles.userImg + ' userImg'}>
             <div className={styles.imgBox + ' imgBox'}>
               <img
-                src={'/users/' + CurrentUserInfo.image || 'user.png'}
+                src={'./users/' + CurrentUserInfo.image || 'user.png'}
                 alt="userImage"
               />
             </div>
@@ -186,7 +186,7 @@ function Profile() {
               <div className={styles.postBlock + ' postBlock'} key={post.id}>
                 <div className={styles.imgBox + ' imgBox'}>
                   <img
-                    src={'/postImages/' + postImageMap[post.id][0]}
+                    src={'./postImages/' + postImageMap[post.id][0]}
                     alt="postImage-first"
                   />
                 </div>
