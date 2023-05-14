@@ -27,7 +27,7 @@ function PostCard({ post, likeAPost, likedList, postImagesList }) {
       <div className={styles.header + ' header text-myblack pe-0'}>
         <div className={styles.imgBox + ' imgBox'}>
           <img
-            src={post.image ? `./users/${post.image}` : 'users/user.png'}
+            src={post.image ? `./users/${post.image}` : './users/user.png'}
             alt="profile_image"
           />
         </div>
