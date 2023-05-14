@@ -1,5 +1,6 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+// import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { NavLinkContext } from './helpers/NavLinkContext'
@@ -59,7 +60,7 @@ function App() {
           <Router>
             <Navbar className="navbar" navLink={navLink}></Navbar>
             <main>
-              <Routes>
+              <Switch>
                 {/* insides <Routes> find the first <Route> that fit the url */}
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route
@@ -86,7 +87,7 @@ function App() {
                   element={<TryFormik></TryFormik>}
                 ></Route>
                 <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
-              </Routes>
+              </Switch>
             </main>
           </Router>
         </NavLinkContext.Provider>
