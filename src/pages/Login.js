@@ -7,7 +7,7 @@ import { NavLinkContext } from '../helpers/NavLinkContext'
 function Login() {
   const navigate = useNavigate()
   const { setNavLink } = useContext(NavLinkContext)
-  const { setAuthState, authState } = useContext(NavLinkContext)
+  const { setAuthState, BASE_URL } = useContext(NavLinkContext)
 
   const initialValues = {
     username: 'Kris',
@@ -27,7 +27,7 @@ function Login() {
   })
 
   const handleSubmit = (values) => {
-    const url = 'http://localhost:3001/auth/login'
+    const url = `${BASE_URL}/auth/login`
     fetch(url, {
       method: 'post',
       body: JSON.stringify(values),

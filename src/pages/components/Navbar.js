@@ -7,11 +7,6 @@ import SidebarIcon from './SidebarIcon'
 
 import styles from '../styleModules/Navbar.module.css'
 
-import InstagramIcon from '@mui/icons-material/Instagram'
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
-import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded'
-import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
 import TableRowsRoundedIcon from '@mui/icons-material/TableRowsRounded'
 import {
   HomeInsta,

@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
+import { useContext } from 'react'
+import { NavLinkContext } from '../../helpers/NavLinkContext'
 import { useForm } from 'react-hook-form'
 
 import styles from '../styleModules/ChangePassword.module.css'
@@ -11,10 +12,12 @@ function ChangePassword() {
     handleSubmit,
   } = useForm()
 
+  const { BASE_URL } = useContext(NavLinkContext)
+
   const changePassword = (data) => {
     console.log(data)
 
-    const url = `http://localhost:3001/auth/changepassword`
+    const url = `${BASE_URL}/auth/changepassword`
     fetch(url, {
       method: 'put',
       headers: {

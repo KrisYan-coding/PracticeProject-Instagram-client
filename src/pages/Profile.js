@@ -28,7 +28,7 @@ function Profile() {
   })
   const [likedList, setLikedList] = useState([])
   const [listOfPosts, setListOfPosts] = useState([])
-  const { authState, setNavLink } = useContext(NavLinkContext)
+  const { authState, setNavLink, BASE_URL } = useContext(NavLinkContext)
   const [postImageMap, setPostImageMap] = useState({})
 
   const [openEdit, setOpenEdit] = useState(false)
@@ -38,7 +38,7 @@ function Profile() {
   const navigate = useNavigate()
 
   const getProfilePostList = () => {
-    const url2 = `http://localhost:3001/posts/byUserId/${uid}`
+    const url2 = `${BASE_URL}/posts/byUserId/${uid}`
     fetch(url2)
       .then((r) => r.json())
       .then((rData) => {
@@ -53,7 +53,7 @@ function Profile() {
   })
 
   useEffect(() => {
-    const url = `http://localhost:3001/auth/basicInfo/${uid}`
+    const url = `${BASE_URL}/auth/basicInfo/${uid}`
     fetch(url)
       .then((r) => r.json())
       .then((rData) => {
@@ -66,7 +66,7 @@ function Profile() {
 
   useEffect(() => {
     if (authState.uid) {
-      const url3 = `http://localhost:3001/likes/checkLikeList/${authState.uid}`
+      const url3 = `${BASE_URL}/likes/checkLikeList/${authState.uid}`
       fetch(url3)
         .then((r) => r.json())
         .then((rData) => {
@@ -84,7 +84,7 @@ function Profile() {
       return alert('Not Login')
     }
 
-    const url = `http://localhost:3001/likes/${pid}`
+    const url = `${BASE_URL}/likes/${pid}`
     fetch(url, {
       method: 'post',
       headers: {

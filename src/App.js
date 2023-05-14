@@ -26,9 +26,10 @@ function App() {
     state: '',
     image: '',
   })
+  const BASE_URL = process.env.BASE_URL
 
   useEffect(() => {
-    const url = 'http://localhost:3001/auth/authToken'
+    const url = `${BASE_URL}/auth/authToken`
     fetch(url, {
       headers: {
         user: localStorage.getItem('user') || '',
@@ -53,7 +54,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <NavLinkContext.Provider
-          value={{ setNavLink, authState, setAuthState }}
+          value={{ setNavLink, authState, setAuthState, BASE_URL }}
         >
           <Router>
             <Navbar className="navbar" navLink={navLink}></Navbar>
