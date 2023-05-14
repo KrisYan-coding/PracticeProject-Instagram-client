@@ -87,7 +87,7 @@ function Navbar({ navLink }) {
                     ' imgBox '
                   }
                 >
-                  <img src={`/users/${authState.image}`} alt="profile-img" />
+                  <img src={`./users/${authState.image}`} alt="profile-img" />
                 </div>
               </Link>
             </div>
