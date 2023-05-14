@@ -4,6 +4,7 @@ import { NavLinkContext } from '../helpers/NavLinkContext'
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt'
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import styles from './styleModules/Profile.module.css'
 
@@ -143,12 +144,12 @@ function Profile() {
               <button
                 className={styles.editBtn + ' userInfo text-h6 font-bold'}
               >
-                <a href="/account/edit/">編輯個人檔案</a>
+                <Link to="/account/edit/">編輯個人檔案</Link>
               </button>
               <div className={styles.settingBtn + ' settingBtn'}>
-                <a href="/account/changePassword/">
+                <Link to={`/account/changePassword/`}>
                   <ProfileSetting />
-                </a>
+                </Link>
               </div>
             </div>
             <div className={styles.dashbord + ' dashbord'}>
