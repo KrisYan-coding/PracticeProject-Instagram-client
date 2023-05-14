@@ -56,11 +56,7 @@ function App() {
         <NavLinkContext.Provider
           value={{ setNavLink, authState, setAuthState, BASE_URL }}
         >
-          <Router
-            basename={
-              'https://krisyan-coding.github.io/PracticeProject_Instagram_client/'
-            }
-          >
+          <Router>
             <Navbar className="navbar" navLink={navLink}></Navbar>
             <main>
               <Routes>
