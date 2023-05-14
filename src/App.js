@@ -56,7 +56,7 @@ function App() {
         <NavLinkContext.Provider
           value={{ setNavLink, authState, setAuthState, BASE_URL }}
         >
-          <Router basename={process.env.BASE_URL_REACT}>
+          <Router basename={process.env.REACT_BASE_URL}>
             <Navbar className="navbar" navLink={navLink}></Navbar>
             <main>
               <Routes>

@@ -83,6 +83,7 @@ function Login() {
 
   return (
     <>
+      <div>{BASE_URL}</div>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
