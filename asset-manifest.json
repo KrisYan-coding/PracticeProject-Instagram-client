@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PracticeProject_Instagram_client/static/css/main.c558254a.css",
-    "main.js": "/PracticeProject_Instagram_client/static/js/main.b42e514c.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/PracticeProject_Instagram_client/static/js/787.c4e7f8f9.chunk.js",
-    "index.html": "/PracticeProject_Instagram_client/index.html",
-    "main.c558254a.css.map": "/PracticeProject_Instagram_client/static/css/main.c558254a.css.map",
-    "main.b42e514c.js.map": "/PracticeProject_Instagram_client/static/js/main.b42e514c.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/PracticeProject_Instagram_client/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/practiceproject_instagram_client/static/css/main.c558254a.css",
+    "main.js": "/practiceproject_instagram_client/static/js/main.3e156ce4.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/practiceproject_instagram_client/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/practiceproject_instagram_client/index.html",
+    "main.c558254a.css.map": "/practiceproject_instagram_client/static/css/main.c558254a.css.map",
+    "main.3e156ce4.js.map": "/practiceproject_instagram_client/static/js/main.3e156ce4.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/practiceproject_instagram_client/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c558254a.css",
-    "static/js/main.b42e514c.js"
+    "static/js/main.3e156ce4.js"
   ]
 }
