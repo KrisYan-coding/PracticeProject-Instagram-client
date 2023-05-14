@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/PracticeProject_Instagram_client/static/css/main.c558254a.css",
-    "main.js": "/PracticeProject_Instagram_client/static/js/main.19b19a9f.js",
+    "main.js": "/PracticeProject_Instagram_client/static/js/main.4f8e1082.js",
     "static/js/787.c4e7f8f9.chunk.js": "/PracticeProject_Instagram_client/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/PracticeProject_Instagram_client/index.html",
     "main.c558254a.css.map": "/PracticeProject_Instagram_client/static/css/main.c558254a.css.map",
-    "main.19b19a9f.js.map": "/PracticeProject_Instagram_client/static/js/main.19b19a9f.js.map",
+    "main.4f8e1082.js.map": "/PracticeProject_Instagram_client/static/js/main.4f8e1082.js.map",
     "787.c4e7f8f9.chunk.js.map": "/PracticeProject_Instagram_client/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c558254a.css",
-    "static/js/main.19b19a9f.js"
+    "static/js/main.4f8e1082.js"
   ]
 }
