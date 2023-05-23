@@ -12,7 +12,7 @@ function Login() {
 
   const initialValues = {
     username: 'Kris',
-    password: '222',
+    password: '111',
   }
 
   useEffect(() => {
