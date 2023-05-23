@@ -10,8 +10,8 @@ export const AuthProvider = ({ children }) => {
     image: '',
   })
 
-  // const BASE_URL = 'https://practiceproject-instagram-server.onrender.com'
-  const BASE_URL = 'http://localhost:3001'
+  const BASE_URL = 'https://practiceproject-instagram-server.onrender.com'
+  // const BASE_URL = 'http://localhost:3001'
 
   // --[validate session-user to prevent using fake token to login]
   const validateUserToken = () => {
