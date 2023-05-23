@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# eslint
+.eslintrc
+.eslintignore
+.prettierignore
+.prettierrc
+
 # testing
 /coverage
 
