@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import { NavLinkContext } from '../../helpers/NavLinkContext'
-import { json, Link } from 'react-router-dom'
-import { Button } from '@mui/material'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useAuth } from '../../helpers/AuthContext'
+import { useNavLink } from '../../helpers/NavLinkContext'
 
 import SidebarIcon from './SidebarIcon'
 
@@ -16,8 +16,9 @@ import {
   HomeCreatActive,
 } from '../Icons/NavIcons'
 
-function Navbar({ navLink }) {
-  const { authState, setAuthState } = useContext(NavLinkContext)
+function Navbar() {
+  const { authState, setAuthState } = useAuth()
+  const { navLink } = useNavLink()
 
   const logout = () => {
     localStorage.removeItem('user')
@@ -87,7 +88,7 @@ function Navbar({ navLink }) {
                     ' imgBox '
                   }
                 >
-                  <img src={`./users/${authState.image}`} alt="profile-img" />
+                  <img src={`/users/${authState.image}`} alt="profile-img" />
                 </div>
               </Link>
             </div>

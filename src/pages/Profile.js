@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import { NavLinkContext } from '../helpers/NavLinkContext'
+import { useNavLink } from '../helpers/NavLinkContext'
+import { useAuth } from '../helpers/AuthContext'
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt'
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt'
 import { useNavigate } from 'react-router-dom'
@@ -29,7 +30,8 @@ function Profile() {
   })
   const [likedList, setLikedList] = useState([])
   const [listOfPosts, setListOfPosts] = useState([])
-  const { authState, setNavLink, BASE_URL } = useContext(NavLinkContext)
+  const { setNavLink } = useNavLink()
+  const { authState, BASE_URL } = useAuth()
   const [postImageMap, setPostImageMap] = useState({})
 
   const [openEdit, setOpenEdit] = useState(false)
@@ -133,8 +135,8 @@ function Profile() {
               <img
                 src={
                   CurrentUserInfo.image.length
-                    ? `./users/${CurrentUserInfo.image}`
-                    : './users/user.png'
+                    ? `/users/${CurrentUserInfo.image}`
+                    : '/users/user.png'
                 }
                 alt="userImage"
               />
@@ -191,7 +193,7 @@ function Profile() {
               <div className={styles.postBlock + ' postBlock'} key={post.id}>
                 <div className={styles.imgBox + ' imgBox'}>
                   <img
-                    src={'./postImages/' + postImageMap[post.id][0]}
+                    src={'/postImages/' + postImageMap[post.id][0]}
                     alt="postImage-first"
                   />
                 </div>
