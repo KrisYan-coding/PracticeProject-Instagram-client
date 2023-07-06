@@ -1,9 +1,12 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 // import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useNavLink } from '../helpers/NavLinkContext'
-import PostCard from './components/PostCard'
 import { useAuth } from '../helpers/AuthContext'
+
+import styles from './styleModules/Home.module.css'
+import PostCard from './components/PostCard'
+import HomeReelsBar from './components/HomeReelsBar'
 
 function Home() {
   const [postsList, setPostsList] = useState([])
@@ -25,7 +28,7 @@ function Home() {
   }, [])
 
   const getPostData = () => {
-    const url = `${BASE_URL}/posts`
+    const url = `${BASE_URL}/posts/home-posts`
     fetch(url, {
       method: 'get',
       headers: {
@@ -47,22 +50,25 @@ function Home() {
   }
 
   return (
-    <>
-      {postsList.map((post) => {
-        return (
-          <PostCard
-            key={post.id}
-            post={post}
-            likedList={likedList}
-            postImagesList={postImageMap[post.id]}
-            commentCountMap={commentCountMap}
-            postsList={postsList}
-            setPostsList={setPostsList}
-            setLikedList={setLikedList}
-          />
-        )
-      })}
-    </>
+    <div className={styles.home + ' home'}>
+      <HomeReelsBar />
+      <div>
+        {postsList.map((post) => {
+          return (
+            <PostCard
+              key={post.id}
+              post={post}
+              likedList={likedList}
+              postImagesList={postImageMap[post.id]}
+              commentCountMap={commentCountMap}
+              postsList={postsList}
+              setPostsList={setPostsList}
+              setLikedList={setLikedList}
+            />
+          )
+        })}
+      </div>
+    </div>
   )
 }
 

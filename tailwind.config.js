@@ -12,6 +12,7 @@ module.exports = {
       h5: '16px',
       h55: '15px',
       h6: '14px',
+      h65: '13px',
       h7: '12px',
       h8: '10px',
     },

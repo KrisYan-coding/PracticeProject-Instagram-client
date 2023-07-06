@@ -1,0 +1,46 @@
+.reelsBar{
+    display: flex;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+.reel{
+    padding: 4px;
+}
+
+.outimgBox2{
+    border-radius: 100%;
+    background: linear-gradient(45deg,#ffc603, #ff2854 50%, #d50bc7);
+    padding: 2px;
+}
+
+.watched .outimgBox2{
+    background: #fff;
+}
+
+.outimgBox1{
+    border-radius: 100%;
+    padding: 2px;
+    background-color: #fff;
+}
+
+.watched .outimgBox1{
+    border: 1px solid #ccc;
+}
+
+.imgBox{
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.watched .imgBox{
+    border: 1px solid #ccc;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

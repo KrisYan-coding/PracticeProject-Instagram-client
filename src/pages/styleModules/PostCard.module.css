@@ -29,6 +29,11 @@
     object-fit: cover;
 }
 
+.body{
+    padding: 0 1px;
+    overflow: hidden;
+}
+
 .postImage .imgBox{
     width: 100%;
     min-height: 350px;
@@ -42,7 +47,7 @@
 .postImage .imgBox img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .header .username:hover{
